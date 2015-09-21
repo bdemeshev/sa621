@@ -1,0 +1,28 @@
+---
+title: "Statistical analysis: sa621"
+output: html_document
+lang: russian
+---
+
+
+## Misc
+* Results
+
+## Bibliography
+#### Probability
+
+#### Statistics
+
+#### R
+
+
+
+## Log 
+
+#### Day 1, 21 september 2015
+* Introduction to R
+* Random variables
+
+
+## License
+All my materials for this course are published under [Creative Commons Attribution-NonCommercial-ShareAlike](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en)
