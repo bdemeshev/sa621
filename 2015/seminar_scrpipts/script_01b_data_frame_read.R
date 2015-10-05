@@ -5,7 +5,7 @@ library("ggplot2")
 
 setwd("D:/sa621")
 
-df <- read_csv2("data.csv")
+df <- read_csv2("data_sem_01.csv")
 df
 
 describe(df)
