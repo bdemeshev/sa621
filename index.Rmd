@@ -19,9 +19,23 @@ lang: russian
 
 ## Log 
 
+#### Day 3, 28 september 2015
+* Normal distribution
+
+
+#### Day 2, 28 september 2015
+* Random variables and events
+* Expected value and probability
+* Variance
+* Uniform distribution
+* Simulations in R: estimation of expected value and variance
+
 #### Day 1, 21 september 2015
-* Introduction to R
-* Random variables
+* Introduction to R:
+  * vectors
+  * data frames
+  * loading data in `.csv` format, creating `.csv` files in Excel
+* Homework: Install R, Rstudio, Latex. Installation instructions [по русски](https://github.com/bdemeshev/em301/wiki/R). For Windows users: If you have English login name, you will NOT encounter problems, just install [the R](https://cran.rstudio.com/), [Rstudio](https://www.rstudio.com/products/rstudio/download/) and [Texlive](https://www.tug.org/texlive/acquire-netinstall.html).
 
 
 ## License
