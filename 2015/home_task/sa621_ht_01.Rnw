@@ -1,0 +1,74 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+
+\usepackage{polyglossia}
+
+\setdefaultlanguage{english}
+\setotherlanguages{russian}
+\setmainfont[Ligatures=TeX]{Linux Libertine O}
+
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\mathbb{V}\mathrm{ar}}
+\DeclareMathOperator{\Cov}{\mathbb{C}\mathrm{ov}}
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\hbeta}{\hat{\beta}}
+
+
+\begin{document}
+
+\section{Mandatory part}
+
+This part of the hometask is graded. 
+
+\begin{enumerate}
+
+\item The height of a randomly selected person is normally distributed with expected value of 170 cm, and standard deviation of 5 cm. 
+\begin{enumerate}
+\item Find the median height, the modal height.
+\item What is the probability that a randomly chosen person will be taller than 180 cm? Lower than 165 cm? Between 165 cm and 190 cm?
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+\section{Optional part}
+
+This part of the hometask is just for fun. 
+
+\begin{enumerate}
+\item  The law of distribution of a random variable $X$ is given in the table
+
+\begin{tabular}{llll}
+\toprule
+Value of $X$ & $0$ & $1$ & $-2$ \\
+Probability & $0.2$ & $0.3$ & $0.5$ \\
+\bottomrule
+\end{tabular}
+
+\begin{enumerate}
+\item Find $\E(X)$, $\E(X^2)$, $\E(5X+10)$, $\Var(X)$, $\E(X^3)$
+\item Find the mode of the random variable $X$
+\end{enumerate}
+
+
+\item James Bond tests  a top secret  hypothesis $H_0$ against even more secret alternative hypothesis $H_a$ at $\alpha= 0.1$ significance level. The P-value is equal to $0.085$. Should James reject the null-hypothesis?
+
+
+\end{enumerate}
+
+\end{document}
