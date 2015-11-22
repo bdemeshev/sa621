@@ -24,11 +24,13 @@ lang: russian
 
 ## Log 
 
+
 #### Day 8, 19 november 2015
 * Interpretation of coefficients in multivariate regression
 * F-test for comparison of nested models
 * Correlation
 * [script_08.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_08_f_test.R)
+* [Hometask is available!!!!](https://github.com/bdemeshev/sa621/raw/master/2015/home_task/sa621_ht_01.pdf)
 
 #### Day 7, 12 november 2015
 * Testing significance of coefficients: standard errors and p-values
