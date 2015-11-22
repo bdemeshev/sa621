@@ -12,6 +12,7 @@
 \setmainfont[Ligatures=TeX]{Linux Libertine O}
 
 \usepackage{booktabs}
+\usepackage{url}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -29,28 +30,12 @@
 
 \begin{document}
 
-\section{Mandatory part}
+\section{Graded part of the homework}
 
-This part of the hometask is graded. 
-
-\begin{enumerate}
-
-\item The height of a randomly selected person is normally distributed with expected value of 170 cm, and standard deviation of 5 cm. 
-\begin{enumerate}
-\item Find the median height, the modal height.
-\item What is the probability that a randomly chosen person will be taller than 180 cm? Lower than 165 cm? Between 165 cm and 190 cm?
-\end{enumerate}
-
-
-
-\end{enumerate}
-
-
-\section{Optional part}
-
-This part of the hometask is just for fun. 
+You should hand in the printed version of the homework 10 december 2015. Each late day will be penalized by 20\%.
 
 \begin{enumerate}
+
 \item  The law of distribution of a random variable $X$ is given in the table
 
 \begin{tabular}{llll}
@@ -61,14 +46,122 @@ Probability & $0.2$ & $0.3$ & $0.5$ \\
 \end{tabular}
 
 \begin{enumerate}
+\item Find $\P(X>0)$, $\P(X^2>3)$
 \item Find $\E(X)$, $\E(X^2)$, $\E(5X+10)$, $\Var(X)$, $\E(X^3)$
 \item Find the mode of the random variable $X$
 \end{enumerate}
 
+\item The height of a randomly selected person is normally distributed with expected value of 170 cm, and standard deviation of 5 cm. 
+\begin{enumerate}
+\item Find the median height, the modal height.
+\item What is the probability that a randomly chosen person will be taller than 180 cm? Lower than 165 cm? Between 165 cm and 190 cm?
+\item What is threshold height for the top 5\% tallest people? The top 10\% lowest people?
+\end{enumerate}
+
+Hint: you may use \verb|pnorm| and \verb|qnorm| functions in \verb|R|
+
+
+
+
+\item Download the dataset on Moscow flat prices, \url{	
+goo.gl/zxwS7u}. Open it in \verb|R|.
+
+\begin{enumerate}
+\item Plot the histogram of of living span. What is the most frequent living span?
+\item Plot the scatter-plot of kitchen span against living span. Are they positively or negatively related?
+\item Provide summary statistics for span variables. What is the size of the biggest kitchen? The smallest living span?
+\item What is the sample correlation between living span and kitchen span? Interpret this value. 
+\end{enumerate}
+
+\item Use the Moscow flat dataset. Estimate the linear regression model where the price of a flat depends on living span, kitchen span and dummy-variable for brick buildings. 
+\begin{enumerate}
+\item Check the significance of each coefficient on the 5\% level.
+\item Check the significance of the regression.
+\item Are brick buildings priced higher of lower than non-brick ones?
+\end{enumerate}
+
+  
+\item Use the Moscow flat dataset. Compare two models:
+
+Model A:
+\[
+price_i = \beta_0 + \beta_{livesp} \cdot livesp_i + \beta_{kitsp} \cdot kitsp_i + \beta_{brick} \cdot brick_i + \varepsilon_i
+\]
+
+Model B:
+\[
+price_i = \beta_0 + \beta_{brick} \cdot brick_i + \varepsilon_i
+\]
+\begin{enumerate}
+\item Carefully specify $H_0$ and $H_a$ and significance level.
+\item Which model is restricted one and which one is unrestricted?
+\item What is the p-value of the F-test?
+\item What is your conclusion?
+\end{enumerate}
+  
+
+
+
+
+\end{enumerate}
+
+
+\section{Optional part. Just for fun!}
+
+
+\begin{enumerate}
+
+\item You have a sample of 5 observations for variables $X$ and $Y$:
+
+\begin{tabular}{c|ccccc}
+$X$ & 1 & 2 & 3 & 2 & -1 \\ 
+\hline 
+$Y$ & 5 & -2 & 7 & 10 & 1 \\ 
+\end{tabular} 
+
+\begin{enumerate}
+\item For each variable calculate sample mean, sample variance, sample standard deviation
+\item Calculate sample correlation between $X$ and $Y$
+\end{enumerate}
+
+\item The random variable $X$ is normally distributed $N(10;4)$, and random variable $Y$ is uniformly distributed on the segment $[5;7]$.
+
+\begin{enumerate}
+\item Find $\E(X)$, $\Var(X)$, $\E(Y)$
+\item Find $\P(X>10)$, $\P(Y<6)$, $\P(Y>6.5)$
+\item Sketch the density functions of $X$ and $Y$
+\item Using \verb|R| function \verb|qnorm| find $\P(X<14)$, $\P(X>12)$
+\end{enumerate}
+
+
+\item Use \verb|R| to generate a random sample of 1000 observations from normal distribution $N(10,4)$ (let's denote this vector by \verb|x|) and a random sample of 1000 observations from distribution uniform between $5$ and $7$ (let's denote this vector by \verb|y|).
+
+\begin{enumerate}
+\item Show first 10 values of \verb|x| and \verb|y|
+\item Plot histogram of \verb|x| and \verb|y|
+\item For each variable calculate sample mean, sample variance, sample standard deviation
+\item Create a new vector \verb|z| equal to \verb|x| plus \verb|y|
+\item Show the scatter plot of \verb|x| and \verb|z|
+\item Calculate sample correlation between \verb|x| and \verb|z|
+\end{enumerate} 
+
+Hint: you may use functions like \verb|rnorm|, \verb|runif|, \verb|var|, \verb|mean|, \verb|sd|, \verb|qplot|. Do not forget to attach the package \verb|ggplot2|.
+
+\item You have a random sample of 100 persons. The mean wage is equal to 42 th. roubles with sample stardard deviation of 5 th. roubles. At 5\% significance level test the null hypothesis that the mean wage in the population is equal to 40 th. roubles against the alternative that it is higher than 40 th. roubles.
 
 \item James Bond tests  a top secret  hypothesis $H_0$ against even more secret alternative hypothesis $H_a$ at $\alpha= 0.1$ significance level. The P-value is equal to $0.085$. Should James reject the null-hypothesis?
 
 
 \end{enumerate}
+
+\vspace{1in}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.17]{work_harder.png} 
+\caption{Russian bears love Statistics!}
+\end{figure}
+
+
 
 \end{document}
