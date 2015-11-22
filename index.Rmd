@@ -9,15 +9,37 @@ lang: russian
 * Results
 
 ## Bibliography
+
 #### Probability
+* 
 
 #### Statistics
+* Harvey Motulsky, Intuitive Biostatistics
+* Gonick, Smith, A Cartoon Guide to Statistics
+* Huff, How to Lie with Statistics
 
 #### R
-
+* Kabacoff, R in action
 
 
 ## Log 
+
+#### Day 8, 19 november 2015
+* Interpretation of coefficients in multivariate regression
+* F-test for comparison of nested models
+* Correlation
+* [script_08.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_08_f_test.R)
+
+#### Day 7, 12 november 2015
+* Testing significance of coefficients: standard errors and p-values
+* [script_07.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_07_linear_regression2.R)
+
+
+#### Day 6, 05 november 2015
+* Method of least squares
+* Linear regression model
+* [script_06.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_06_linear_regression.R)
+
 
 #### Day 5, 19 october 2015
 * Binomial distribution
