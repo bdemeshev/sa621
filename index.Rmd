@@ -12,6 +12,7 @@ lang: russian
 
 #### Probability
 * Ash, Probability Tutoring Book
+* Freund, Introduction to probability
 
 #### Statistics
 * Harvey Motulsky, Intuitive Biostatistics
@@ -20,7 +21,7 @@ lang: russian
 
 #### R
 * Kabacoff, R in action
-
+* [Intro to probability and statistics using R](http://gis-lab.info/docs/books/kerns10_ipsur.pdf)
 
 ## Log 
 
