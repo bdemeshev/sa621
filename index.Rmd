@@ -11,7 +11,7 @@ lang: russian
 ## Bibliography
 
 #### Probability
-* todo some intuitive books on probabs
+* Ash, Probability Tutoring Book
 
 #### Statistics
 * Harvey Motulsky, Intuitive Biostatistics
