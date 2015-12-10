@@ -6,7 +6,7 @@ lang: russian
 
 
 ## Misc
-* Results
+* [Results](https://docs.google.com/spreadsheets/d/1T9MGrBXeyrGsI-NNjYYLkIw7k-h1XCG0qLsbCqQZsoc/pubhtml)
 
 ## Bibliography
 
@@ -25,6 +25,17 @@ lang: russian
 
 ## Log 
 
+#### Day 10, 11 december 2015
+* Age pyramid using `HH` package
+* [script_10.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_10_age_pyramid_2.R)
+* R-markdown: [age pyramid-2](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/age_pyramid.Rmd)
+* R-markdown: [tiny presentation example]()
+
+
+#### Day 9, 4 december 2015
+* Age pyramid using `plotrix` package
+* [script_09.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_09_age_pyramid.R)
+* R-markdown: [age pyramid](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/super_research.Rmd)
 
 #### Day 8, 19 november 2015
 * Interpretation of coefficients in multivariate regression
