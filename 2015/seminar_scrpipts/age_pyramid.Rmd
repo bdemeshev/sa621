@@ -1,0 +1,42 @@
+---
+title: "Example of age pyramid"
+author: "Boris Demeshev"
+date: "10 December 2015"
+output: word_document
+---
+
+We analyse data on US population. First we attach some useful packages.
+```{r, include=FALSE}
+library("HH")
+library("dplyr")
+library("reshape2")
+library("pander") # !!!!
+```
+
+Let's load US age dateset and show first observations.
+```{r, results='asis'}
+t <- filter(USAge.df, Year==1975)
+head(t, 10) %>% pander()
+```
+
+Now we draw US age pyramid
+```{r}
+t2 <- dcast(t, Age~Sex, 
+            value.var = "Population")
+t3 <- t2 %>% arrange(-Age) %>% select(-Age)
+plot_data <- as.likert(t3)
+scales <- list(
+  y = list(
+    limits=c(0,76),
+    at=seq(0,75, by=5),
+    labels=seq(0,75, by=5), tck=1 ))
+plot(plot_data, main="Hi, Ada Lovelace!",
+     xlab="Population in mlns",
+     ylab="Age (usa, 1950)", scales=scales)
+```
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+---
+title: "The Super Research Project"
+author: "Winnie the Pooh"
+date: "3 December 2015"
+output: word_document
+---
+
+Let's calculate five by four. It is equal to `r 5*4`.
+
+We analyse USA population.
+
+```{r, message=FALSE, echo=FALSE}
+library("HH")
+library("dplyr")
+library("plotrix")
+library("latticeExtra")
+library("reshape2")
+pop_1950 <- filter(USAge.df,  Year == 1950)
+pop_1950b <- select(pop_1950, -Year)
+pop_1950_wide <- dcast(pop_1950b, 
+                       Age~Sex, 
+          value.var = "Population")
+p <- pop_1950_wide
+pyramid.plot(lx = p$Male, 
+             rx = p$Female,
+             labels = p$Age,
+             main="US population 1950",
+             gap = 0.3)
+```
+

@@ -1,0 +1,35 @@
+---
+title: "Optional part of the hometask"
+author: "Boris Demeshev"
+date: "10 December 2015"
+output: ioslides_presentation
+---
+
+## Short solution
+
+- We will solve first exersise
+- And we will go home :)
+
+## Our data
+
+```{r}
+x <- c(1, 2, 3, 2, -1)
+y <- c(5, -2, 7, 10, 1)
+```
+
+## And now answers!
+
+The sample mean of X is equal to `r mean(x)`.
+
+The sample variance of X is equal to `r var(x)`.
+
+The sample standard deviation of X is equal to `r sd(x)`.
+
+## Happy New Year
+
+![](https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg)
+
+
+
+
+
