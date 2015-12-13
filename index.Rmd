@@ -20,6 +20,7 @@ lang: russian
 * Huff, How to Lie with Statistics
 
 #### R
+* [R cheatsheets](https://www.rstudio.com/resources/cheatsheets/) from Rstudio
 * Kabacoff, R in action
 * [Intro to probability and statistics using R](http://gis-lab.info/docs/books/kerns10_ipsur.pdf)
 
