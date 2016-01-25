@@ -1,0 +1,206 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage[paper=a4paper, top=20mm, bottom=20mm, left=20mm, right=20mm, includefoot]{geometry}
+\def\baselinestretch{1.5}
+
+\begin{document}
+
+<<include=FALSE>>=
+library("dplyr")
+library("ggplot2")
+# opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
+@
+
+\begin{center}
+\begin{Large}
+\textbf{Solutions to homework}
+\end{Large}
+\end{center}
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $P(X > 0) = P(X = 1) = 0.3$
+
+$P(X^2 > 3) = P(X^2 = 4) = 0.5$
+
+\item $E(X) = 0 \cdot 0.2 + 1 \cdot 0.3 + (-2) \cdot 0.5 = - 0.7$
+
+$E(X^2) = 0^2 \cdot 0.2 + 1^2 \cdot 0.3 + (-2)^2 \cdot 0.5 = 2.3$
+
+$E(5X + 10) = 5\cdot E(X) + 10 = 5 \cdot (-0.7) + 10 = 6.5$
+
+$Var(X) = E(X^2) - (E(X))^2 = 2.3 - (-0.7)^2 = 1.81$
+
+$E(X^3) = 0^3 \cdot 0.2 + 1^3 \cdot 0.3 + (-2)^3 \cdot 0.5 = - 3.7$
+
+\item Mode equals -2
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item Median and mode are equal to 170 as this is Normal distribution.
+
+\item
+<<>>=
+1 - pnorm(180, mean = 170, sd=5)
+pnorm(165, mean = 170, sd=5)
+pnorm(190, mean = 170, sd=5) - pnorm(165, mean = 170, sd=5)
+@
+
+\item
+<<>>=
+qnorm(0.95, mean = 170, sd=5)
+qnorm(0.10, mean = 170, sd=5)
+@
+\end{enumerate}
+
+\item
+<<echo=FALSE>>=
+setwd("~/Documents/University/master_2_year/Pad")
+@
+
+\begin{enumerate}
+<<message=FALSE>>=
+library(ggplot2)
+library(dplyr)
+library(texreg)
+df <- read.table(file = "flats_moscow.txt",
+                 header = TRUE,
+                 dec = ".", sep = "\t")
+@
+
+\item
+<<fig.width=8>>=
+ggplot(df, aes(livesp)) + 
+  geom_histogram(binwidth=1, fill="lightblue", color="blue") + 
+  labs(x="Living space",y="Number of observations", title="Histogram of Living Space")
+@
+
+The most frequent living space is 45.
+<<fig.width=8>>=
+df_short <- subset(df, livesp > 40 & livesp < 50)
+ggplot(df_short, aes(livesp)) + 
+  geom_histogram(binwidth=1, fill="lightblue", color="blue") + 
+  labs(x="Living space",y="Number of observations", title="Histogram of Living Space")
+@
+
+\item On the whole they are positively related.
+<<fig.width=8>>=
+ggplot(df, aes(x=kitsp, y=livesp)) + 
+  geom_point(color="red") + 
+  labs(x="Kitchen space",y="Living space", title="Scatter-plot")
+@
+
+\item The size of the biggest kitchen is 25, the smallest living space is 28.
+<<>>=
+df_span <- select(df, c(totsp, livesp, kitsp))
+summary(df_span)
+@
+
+\item The correlation is positive and is slightly greater than 0.5, which means that the linear connection is quite strong and when kitchen space increases, living space increases as well. This is logical as you won't have a big kitchen in a tiny flat.
+<<>>=
+cor(df$kitsp, df$livesp)
+@
+
+\end{enumerate} 
+
+\item Our model is 
+
+$price_i = \beta_0 + \beta_{livesp} \cdot livesp_i + \beta_{kitsp} \cdot kitsp_i + \beta_{brick} \cdot brick_i + \varepsilon_i$
+
+\begin{enumerate}
+\item Testing each coefficient for significance separately.
+
+$H_0: \beta_{i} = 0$ 
+
+$H_A: \beta_{i} \neq 0$
+
+Criterion: 
+\begin{itemize}
+\item P-value $>$ significance level, do not reject $H_0$ (the coefficient is not significant, does not influence the price)
+\item P-value $<$ significance level, reject $H_0$ (the coefficient is significant, influences the price)
+\end{itemize}
+
+<<>>=
+model <- lm(data = df, price ~ livesp + kitsp + brick)
+# summary(model)
+@
+
+<<results='asis'>>=
+#texreg(model,single.row = TRUE)
+@
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{l c }
+\hline
+            & Model 1 \\
+\hline
+(Intercept) & $-86.43 \; (4.40)^{***}$ \\
+livesp      & $3.44 \; (0.12)^{***}$   \\
+kitsp       & $5.57 \; (0.33)^{***}$   \\
+brick       & $14.78 \; (1.65)^{***}$  \\
+\hline
+R$^2$       & 0.60                     \\
+Adj. R$^2$  & 0.60                     \\
+Num. obs.   & 2040                     \\
+RMSE        & 33.00                    \\
+\hline
+\multicolumn{2}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$}}
+\end{tabular}
+\label{table:coefficients}
+\end{center}
+\end{table}
+
+For each coefficient P-value is less than 2e-16, which is smaller than any reasonable significance level (1\%, 5\%, 10\%), so we reject the null hypothesis that each beta is equal to zero. So each of coefficients is significant and influences the price.
+
+\item Testing the whole regression for significance.
+
+$H_0: \beta_{livesp}=0, \beta_{kitsp} = 0, \beta_{brick} = 0, \beta_0 = 0$ 
+
+$H_A:$ At least one beta is not equal to 0
+
+Criterion: 
+\begin{itemize}
+\item P-value $>$ significance level, do not reject $H_0$ (which means that the model is bad)
+\item P-value $<$ significance level, reject $H_0$ (which means that the model is contains at least one variable influencing the price)
+\end{itemize}
+
+P-value for the whole model is 2.2e-16, which is smaller than any reasonable significance level (1\%, 5\%, 10\%), so we reject the null hypothesis that all betas are equal to zero. It means that at least one coefficient is significant, it influences the price. So model is not bad.
+
+\item Brick houses are priced higher than the ones that are not brick ones as the coefficient is positive (14.78) and significant. 
+
+\end{enumerate}
+
+\item
+<<>>=
+model1 <- lm(data = df, price ~ livesp + kitsp + brick)
+model2 <- lm(data = df, price ~ brick)
+anova(model2, model1)
+@
+
+\begin{enumerate}
+\item Comparing two models.
+
+We can test 1\%, 5\% and 10\% significance levels (standard).
+
+$H_0: \beta_{livesp} = 0, \beta_{kitsp} = 0$ 
+
+$H_a:$ At least one beta is not equal to 0
+
+Criterion: 
+\begin{itemize}
+\item P-value $>$ significance level, do not reject $H_0$ (which means that restricted model works well, we do not need to include living space and kitchen space in the regression)
+\item P-value $<$ significance level, reject $H_0$ (which means that living space and kitchen space should be included in the regression)
+\end{itemize}
+
+\item Model 1 is unrestricted (long). Model 2 is restricted (short).
+\item P-value is less than 2.2e-16.
+\item P-value is less than any reasonable significance level (1\%, 5\%, 10\%) so we reject the null hypothesis that $\beta_{livesp}$ and $\beta_{kitsp}$ are equal to zero as P-value is smaller than any reasonable significance level. The restricted model is worse than the unrestricted one, we should include living space and kitchen space in our model.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
