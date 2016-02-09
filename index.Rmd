@@ -26,6 +26,12 @@ lang: russian
 
 ## Log 
 
+
+#### Day 11, 04 february 2016
+* log properties
+* logit model, [script_11.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_11_logit.R)
+* marginal effects
+
 #### [Hometask solution:](https://github.com/bdemeshev/sa621/raw/master/2015/ht_solution/hw.pdf) 
 * thanks to Anna Tikhonova!
 
