@@ -29,7 +29,7 @@ lang: russian
 
 #### Day 11, 04 february 2016
 * log properties
-* logit model, [script_11.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_11_logit.R)
+* logit model, [script_11.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_11_logit.R)
 * marginal effects
 
 #### [Hometask solution:](https://github.com/bdemeshev/sa621/raw/master/2015/ht_solution/hw.pdf) 
@@ -37,51 +37,51 @@ lang: russian
 
 #### Day 10, 11 december 2015
 * Age pyramid using `HH` package
-* [script_10.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_10_age_pyramid_2.R)
-* R-markdown: [age pyramid-2](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/age_pyramid.Rmd)
-* R-markdown: [tiny presentation example](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/optional_part_solution.Rmd)
+* [script_10.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_10_age_pyramid_2.R)
+* R-markdown: [age pyramid-2](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/age_pyramid.Rmd)
+* R-markdown: [tiny presentation example](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/optional_part_solution.Rmd)
 
 
 #### Day 9, 4 december 2015
 * Age pyramid using `plotrix` package
-* [script_09.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_09_age_pyramid.R)
-* R-markdown: [age pyramid](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/super_research.Rmd)
+* [script_09.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_09_age_pyramid.R)
+* R-markdown: [age pyramid](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/super_research.Rmd)
 
 #### Day 8, 19 november 2015
 * Interpretation of coefficients in multivariate regression
 * F-test for comparison of nested models
 * Correlation
-* [script_08.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_08_f_test.R)
+* [script_08.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_08_f_test.R)
 * [Hometask is available!!!!](https://github.com/bdemeshev/sa621/raw/master/2015/home_task/sa621_ht_01.pdf)
 
 #### Day 7, 12 november 2015
 * Testing significance of coefficients: standard errors and p-values
-* [script_07.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_07_linear_regression2.R)
+* [script_07.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_07_linear_regression2.R)
 
 
 #### Day 6, 05 november 2015
 * Method of least squares
 * Linear regression model
-* [script_06.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_06_linear_regression.R)
+* [script_06.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_06_linear_regression.R)
 
 
 #### Day 5, 19 october 2015
 * Binomial distribution
 * Hypothesis testing with binomial distribution
 * Hypothesis testing with normal distribution
-* [script_05.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_05_binomial_hyp_testing.R)
+* [script_05.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_05_binomial_hyp_testing.R)
 
 #### Day 4, 12 october 2015
 * Normal distribution
 * Density function, distribution function
-* [script_04.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_04_histogram_normal_distribution.R)
+* [script_04.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_04_histogram_normal_distribution.R)
 
 #### Day 3, 05 october 2015
 * Recap: expected value, $E(X)$, variance, $Var(X)$
 * Estimators: sample mean, $\bar{X}$, for expected value $E(X)$; sample variance,
 $\hat\sigma^2$ for $Var(X)$.
 * histogram, scatter plot, violin plot in R
-* Divide and conquer strategy, `dplyr` R-package, [script_03.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_03_dplyr_simple_graphs.R)
+* Divide and conquer strategy, `dplyr` R-package, [script_03.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_03_dplyr_simple_graphs.R)
 
 
 
@@ -94,9 +94,9 @@ $\hat\sigma^2$ for $Var(X)$.
 
 #### Day 1, 21 september 2015
 * Introduction to R:
-  * vectors: [script_01.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_01_vector_sample.R)
+  * vectors: [script_01.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_01_vector_sample.R)
   * data frames
-  * loading data in `.csv` format, creating `.csv` files in Excel:  [data_sem_01.csv](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/data_sem_01.csv), [script_01b.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scrpipts/script_01b_data_frame_read.R)
+  * loading data in `.csv` format, creating `.csv` files in Excel:  [data_sem_01.csv](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/data_sem_01.csv), [script_01b.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_01b_data_frame_read.R)
 * Homework: Install R, Rstudio, Latex. Installation instructions [по русски](https://github.com/bdemeshev/em301/wiki/R). For Windows users: If you have English login name, you will NOT encounter problems, just install [the R](https://cran.rstudio.com/), [Rstudio](https://www.rstudio.com/products/rstudio/download/) and [Texlive](https://www.tug.org/texlive/acquire-netinstall.html).
 
 
