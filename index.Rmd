@@ -26,6 +26,9 @@ lang: russian
 
 ## Log 
 
+#### Day 12, 11 february 2016
+* difference between linear regression and logit models
+* visualizing regression, [script_12.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_12_visualise.R)
 
 #### Day 11, 04 february 2016
 * log properties
