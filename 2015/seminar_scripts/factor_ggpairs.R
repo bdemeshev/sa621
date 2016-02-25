@@ -21,3 +21,19 @@ tit$SibSp <- recode(tit$SibSp, "2:8='2+'")
 glimpse(titanic_train)
 
 ggpairs(tit, columns = c(2:3, 6:8, 10))
+
+
+library(psych)
+pairs.panels(swiss)
+library(titanic)
+pairs.panels(titanic_train)
+cor.plot(swiss)
+
+
+a <- cor(swiss)
+cor.plot(a)
+?cor.plot
+
+a
+iclust(swiss)
+iclust(titanic_train)
