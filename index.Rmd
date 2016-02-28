@@ -24,7 +24,20 @@ lang: russian
 * Kabacoff, R in action
 * [Intro to probability and statistics using R](http://gis-lab.info/docs/books/kerns10_ipsur.pdf)
 
-## Log 
+## Log and plan
+
+#### Day 15, 10 march 2016 (plan)
+* problem solving session (preparation for exam)
+
+#### Day 14, 03 march 2016 (plan)
+* tree 
+* random forest for numeric and factor dependent variables
+
+#### Day 13, 25 february 2016
+* Scatter plot matrix
+* Visualizing logit regression
+* [script_13.R](https://github.com/bdemeshev/sa621/raw/master/2015/seminar_scripts/script_13_scatter_matrix.R)
+
 
 #### Day 12, 11 february 2016
 * difference between linear regression and logit models
