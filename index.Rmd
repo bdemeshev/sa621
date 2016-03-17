@@ -7,6 +7,7 @@ lang: russian
 
 ## Misc
 * [Results](https://docs.google.com/spreadsheets/d/1T9MGrBXeyrGsI-NNjYYLkIw7k-h1XCG0qLsbCqQZsoc/pubhtml)
+* [Video for last two lectures](https://www.youtube.com/playlist?list=PL1poMUvVlAqdRD5ww3w-VBNRCFwQMeQkJ)
 
 ## Bibliography
 
@@ -15,7 +16,7 @@ lang: russian
 * Freund, Introduction to probability
 
 #### Statistics
-* Harvey Motulsky, Intuitive Biostatistics
+* **Harvey Motulsky, Intuitive Biostatistics**
 * Gonick, Smith, A Cartoon Guide to Statistics
 * Huff, How to Lie with Statistics
 
