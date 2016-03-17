@@ -27,12 +27,17 @@ lang: russian
 
 ## Log and plan
 
-#### Day 15, 10 march 2016 (plan)
+#### [Exam-demo](https://github.com/bdemeshev/sa621/raw/master/2015/exam/exam_16_demo.pdf)
+
+#### Day 16, 17 march 2016 
 * problem solving session (preparation for exam)
 
-#### Day 14, 03 march 2016 (plan)
+#### Day 15, 10 march 2016 
+* problem solving session (preparation for exam)
+
+#### Day 14, 03 march 2016 
 * tree 
-* random forest for numeric and factor dependent variables
+* random forest for factor dependent variables
 
 #### Day 13, 25 february 2016
 * Scatter plot matrix
