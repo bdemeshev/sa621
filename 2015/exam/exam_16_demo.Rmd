@@ -124,7 +124,7 @@ The F-test for these two models gave P-value of 0.0002016.
 Researcher Veniamin would like to predict whether it will rain tomorrow ($y_i$) given the number of times his cat has meowed today ($x_i$). Veniamin has estimated the logit model:
 
 \[
-P(y_i = 1) = \beta_1  + \beta_2 x_i
+P(y_i = 1) = F(\beta_1  + \beta_2 x_i)
 \]
 
 Coefficient  | Estimate | Std. error
